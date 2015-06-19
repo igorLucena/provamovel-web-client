@@ -1,0 +1,118 @@
+<wsdl:definitions xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://localhost:8080/axis/Cadastro.jws" xmlns:intf="http://localhost:8080/axis/Cadastro.jws" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://localhost:8080/axis/Cadastro.jws">
+<!--
+WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)
+-->
+<wsdl:message name="setSenhaRequest">
+<wsdl:part name="senha" type="xsd:string"/>
+</wsdl:message>
+<wsdl:message name="getNomeUsuarioRequest"></wsdl:message>
+<wsdl:message name="setSenhaResponse"></wsdl:message>
+<wsdl:message name="getEmailRequest"></wsdl:message>
+<wsdl:message name="getSenhaResponse">
+<wsdl:part name="getSenhaReturn" type="xsd:string"/>
+</wsdl:message>
+<wsdl:message name="getSenhaRequest"></wsdl:message>
+<wsdl:message name="setNomeUsuarioRequest">
+<wsdl:part name="nomeUsuario" type="xsd:string"/>
+</wsdl:message>
+<wsdl:message name="setEmailResponse"></wsdl:message>
+<wsdl:message name="setNomeUsuarioResponse"></wsdl:message>
+<wsdl:message name="getNomeUsuarioResponse">
+<wsdl:part name="getNomeUsuarioReturn" type="xsd:string"/>
+</wsdl:message>
+<wsdl:message name="setEmailRequest">
+<wsdl:part name="email" type="xsd:string"/>
+</wsdl:message>
+<wsdl:message name="getEmailResponse">
+<wsdl:part name="getEmailReturn" type="xsd:string"/>
+</wsdl:message>
+<wsdl:portType name="Cadastro">
+<wsdl:operation name="setSenha" parameterOrder="senha">
+<wsdl:input message="impl:setSenhaRequest" name="setSenhaRequest"/>
+<wsdl:output message="impl:setSenhaResponse" name="setSenhaResponse"/>
+</wsdl:operation>
+<wsdl:operation name="getSenha">
+<wsdl:input message="impl:getSenhaRequest" name="getSenhaRequest"/>
+<wsdl:output message="impl:getSenhaResponse" name="getSenhaResponse"/>
+</wsdl:operation>
+<wsdl:operation name="setEmail" parameterOrder="email">
+<wsdl:input message="impl:setEmailRequest" name="setEmailRequest"/>
+<wsdl:output message="impl:setEmailResponse" name="setEmailResponse"/>
+</wsdl:operation>
+<wsdl:operation name="getEmail">
+<wsdl:input message="impl:getEmailRequest" name="getEmailRequest"/>
+<wsdl:output message="impl:getEmailResponse" name="getEmailResponse"/>
+</wsdl:operation>
+<wsdl:operation name="setNomeUsuario" parameterOrder="nomeUsuario">
+<wsdl:input message="impl:setNomeUsuarioRequest" name="setNomeUsuarioRequest"/>
+<wsdl:output message="impl:setNomeUsuarioResponse" name="setNomeUsuarioResponse"/>
+</wsdl:operation>
+<wsdl:operation name="getNomeUsuario">
+<wsdl:input message="impl:getNomeUsuarioRequest" name="getNomeUsuarioRequest"/>
+<wsdl:output message="impl:getNomeUsuarioResponse" name="getNomeUsuarioResponse"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="CadastroSoapBinding" type="impl:Cadastro">
+<wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="setSenha">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="setSenhaRequest">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+</wsdl:input>
+<wsdl:output name="setSenhaResponse">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/axis/Cadastro.jws" use="encoded"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getSenha">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getSenhaRequest">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+</wsdl:input>
+<wsdl:output name="getSenhaResponse">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/axis/Cadastro.jws" use="encoded"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="setEmail">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="setEmailRequest">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+</wsdl:input>
+<wsdl:output name="setEmailResponse">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/axis/Cadastro.jws" use="encoded"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getEmail">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getEmailRequest">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+</wsdl:input>
+<wsdl:output name="getEmailResponse">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/axis/Cadastro.jws" use="encoded"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="setNomeUsuario">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="setNomeUsuarioRequest">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+</wsdl:input>
+<wsdl:output name="setNomeUsuarioResponse">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/axis/Cadastro.jws" use="encoded"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getNomeUsuario">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getNomeUsuarioRequest">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+</wsdl:input>
+<wsdl:output name="getNomeUsuarioResponse">
+<wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/axis/Cadastro.jws" use="encoded"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="CadastroService">
+<wsdl:port binding="impl:CadastroSoapBinding" name="Cadastro">
+<wsdlsoap:address location="http://localhost:8080/axis/Cadastro.jws"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
